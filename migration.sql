@@ -1,4 +1,6 @@
-USE adlister_db;
+CREATE DATABASE IF NOT EXISTS ODlister_db;
+
+USE ODlister_db;
 
 DROP TABLE IF EXISTS ads;
 DROP TABLE IF EXISTS users;
@@ -15,6 +17,8 @@ CREATE TABLE ads (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     user_id INT UNSIGNED NOT NULL,
     title VARCHAR(240) NOT NULL,
+    createdOn Date NOT NULL,
+    field VARCHAR(100) NOT NULL,
     description TEXT NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES users(id)
