@@ -14,6 +14,15 @@
                 <input id="title" name="title" class="form-control" type="text">
             </div>
             <div class="form-group">
+                <label>Date:</label>
+                <input type="date" id="date_created" name="date">
+                <label>Choose a Category:</label>
+                <select name="field" id="categories">
+                    <option value="camping">Camping</option>
+                    <option value="fishing">Fishing</option>
+                    <option value="hiking">Hiking</option>
+                    <option value="misc">Miscellaneous</option>
+                </select>
                 <label for="description">Description</label>
                 <textarea id="description" name="description" class="form-control" type="text"></textarea>
             </div>
