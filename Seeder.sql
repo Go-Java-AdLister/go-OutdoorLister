@@ -1,4 +1,4 @@
-USE ODlister_db;
+USE odlister_db;
 
 INSERT INTO users(username, email, password)
     VALUE ('test', 'test@gmail.com', 'password');

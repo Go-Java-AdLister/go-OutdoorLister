@@ -22,7 +22,8 @@
                     <option value="fishing">Fishing</option>
                     <option value="hiking">Hiking</option>
                     <option value="misc">Miscellaneous</option>
-                </select>
+                </select><br>
+                <hr>
                 <label for="description">Description</label>
                 <textarea id="description" name="description" class="form-control" type="text"></textarea>
             </div>
