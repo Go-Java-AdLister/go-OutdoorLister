@@ -2,20 +2,18 @@ package com.codeup.adlister.models;
 
 import com.mysql.cj.conf.PropertyDefinitions;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Ad {
     private long id;
     private long userId;
     private String title;
-    private Date createdOn;
+    private String createdOn;
     private String field;
+    private String description;
 
-    public Date getCreatedOn() {
-        return createdOn;
-    }
 
-    public Ad(long id, long userId, String title, Date createdOn, String field, String description) {
+    public Ad(long id, long userId, String title, String createdOn, String field, String description) {
         this.id = id;
         this.userId = userId;
         this.title = title;
@@ -24,7 +22,19 @@ public class Ad {
         this.description = description;
     }
 
-    public void setCreatedOn(Date createdOn) {
+    public Ad(long userId, String title, String createdOn, String field, String description) {
+        this.userId = userId;
+        this.title = title;
+        this.createdOn = createdOn;
+        this.field = field;
+        this.description = description;
+    }
+
+    public String getCreatedOn() {
+        return createdOn;
+    }
+
+    public void setCreatedOn(String createdOn) {
         this.createdOn = createdOn;
     }
 
@@ -34,24 +44,6 @@ public class Ad {
 
     public void setField(String field) {
         this.field = field;
-    }
-
-    private String description;
-
-    public Ad(long id, long userId, String title, String description) {
-        this.id = id;
-        this.userId = userId;
-        this.title = title;
-        this.description = description;
-    }
-
-    public Ad(long userId, String title, String description) {
-        this.userId = userId;
-        this.title = title;
-        this.description = description;
-    }
-
-    public Ad(long id, String title, String createdOn, String field, String description) {
     }
 
     public long getId() {
@@ -71,7 +63,7 @@ public class Ad {
     }
 
     public String getTitle() {
-        return title;
+        return this.title;
     }
 
     public void setTitle(String title) {

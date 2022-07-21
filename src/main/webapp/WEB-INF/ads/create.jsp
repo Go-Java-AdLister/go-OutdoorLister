@@ -6,15 +6,16 @@
     </jsp:include>
 </head>
 <body>
+<jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
-        <h1>Create a new Ad</h1>
+        <h1 class="mb-3">Create a new Ad</h1>
         <form action="/ads/create" method="post">
             <div class="form-group">
-                <label for="title">Title</label>
+                <label>Title</label>
                 <input id="title" name="title" class="form-control" type="text">
             </div>
             <div class="form-group">
-                <label>Date:</label>
+                <label for="date_created">Date:</label>
                 <input type="date" id="date_created" name="date">
                 <label>Choose a Category:</label>
                 <select name="field" id="categories">
@@ -30,5 +31,11 @@
             <input type="submit" class="btn btn-block btn-primary">
         </form>
     </div>
+<div calss="bg-image"
+style="background-image: url('https://d29fhpw069ctt2.cloudfront.net/photo/34479/preview/photo-1413752567787-baa02dde3c65_npreviews_7b80.jpg');
+        height: 70vh;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.6);">
+</div>
 </body>
 </html>

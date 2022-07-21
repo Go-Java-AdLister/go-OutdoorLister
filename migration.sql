@@ -19,7 +19,7 @@ CREATE TABLE ads (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     user_id INT UNSIGNED NOT NULL,
     title VARCHAR(240) NOT NULL,
-    createdOn Date NOT NULL,
+    createdOn VARCHAR(50) NOT NULL,
     field VARCHAR(100) NOT NULL,
     description TEXT NOT NULL,
     PRIMARY KEY (id),
