@@ -10,11 +10,11 @@
         <h1>Create a new Ad</h1>
         <form action="/ads/create" method="post">
             <div class="form-group">
-                <label for="title">Title</label>
+                <label>Title</label>
                 <input id="title" name="title" class="form-control" type="text">
             </div>
             <div class="form-group">
-                <label>Date:</label>
+                <label for="date_created">Date:</label>
                 <input type="date" id="date_created" name="date">
                 <label>Choose a Category:</label>
                 <select name="field" id="categories">
