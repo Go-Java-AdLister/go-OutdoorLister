@@ -1,6 +1,8 @@
-CREATE DATABASE IF NOT EXISTS ODlister_db;
+DROP DATABASE IF EXISTS ODlister_db;
 
-USE ODlister_db;
+CREATE DATABASE IF NOT EXISTS odlister_db;
+
+USE odlister_db;
 
 DROP TABLE IF EXISTS ads;
 DROP TABLE IF EXISTS users;
