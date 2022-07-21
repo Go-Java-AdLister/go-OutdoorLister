@@ -66,7 +66,7 @@ public class MySQLAdsDao implements Ads {
             ad = new Ad(rs.getLong("id"),
                         rs.getLong("user_id"),
                         rs.getString("title"),
-                        rs.getDate("createdOn"),
+                        rs.getString("createdOn"),
                         rs.getString("field"),
                         rs.getString("description")
                                     );
