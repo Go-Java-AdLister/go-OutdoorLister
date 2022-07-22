@@ -8,6 +8,7 @@
 </head>
 <body style="background-color: #C39876">
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
+
 <div class="container pt-5">
     <h1>So much to do, So little time to do it</h1>
 </div>
@@ -23,7 +24,6 @@
                 <a class="ms-auto" href="/details?id=${ads.id}">More Details</a>
             </div>
 
-        </div>
     </c:forEach>
 </div>
 
