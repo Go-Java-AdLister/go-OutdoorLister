@@ -35,7 +35,6 @@ public class ViewProfileServlet extends HttpServlet {
 
         request.setAttribute("ads", ads);
 
-        long posts = countPosts(user);
 
 
         request.setAttribute("posts", posts);
