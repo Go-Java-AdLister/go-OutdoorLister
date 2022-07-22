@@ -1,5 +1,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
+<jsp:include page="/WEB-INF/partials/head.jsp">
+    <jsp:param name="title" value="Your Profile" />
+</jsp:include>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <div class="navbar navbar-expand-lg navbar-light bg-light">

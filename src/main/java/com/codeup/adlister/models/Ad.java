@@ -12,6 +12,9 @@ public class Ad {
     private String field;
     private String description;
 
+    public Ad(){
+
+    }
 
     public Ad(long id, long userId, String title, String createdOn, String field, String description) {
         this.id = id;

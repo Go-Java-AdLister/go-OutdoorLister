@@ -53,6 +53,8 @@ public class MySQLUsersDao implements Users {
         }
     }
 
+
+
     private User extractUser(ResultSet rs) throws SQLException {
         if (! rs.next()) {
             return null;
@@ -65,19 +67,7 @@ public class MySQLUsersDao implements Users {
         );
     }
 
-//    public long countPosts(User user){
-//        long id = user.getId();
-//        long numberOfPosts = 0;
-//        Ads ads = DaoFactory.getAdsDao();
-//        List<Ad> adsList = ads.all();
-//        for(Ad ad: adsList){
-//            if(ad.getUserId() == id){
-//                numberOfPosts += 1;
-//            }
-//        }
-//
-//        return numberOfPosts;
-//    }
+
 
 
 }
