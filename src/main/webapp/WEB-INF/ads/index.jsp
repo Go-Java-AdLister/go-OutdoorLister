@@ -12,6 +12,7 @@
 <div class="container d-flex">
 
     <c:forEach var="ads" items="${ads}">
+
         <div class="container col-md-5 p-0">
             <h2><c:out value="${ads.title}"/></h2>
             <h5 class="fst-italic fs-6"><c:out value="${ads.field}"/></h5>

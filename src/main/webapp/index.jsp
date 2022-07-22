@@ -9,7 +9,15 @@
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
-        <h1>Welcome to the Adlister!</h1>
+<%--        <h1>Welcome to the Adlister!</h1>--%>
+    </div>
+    <div calss="image-fluid"
+         style="background-image: url('img/cover.png');
+        height: 100vh;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        ">
     </div>
 </body>
 </html>

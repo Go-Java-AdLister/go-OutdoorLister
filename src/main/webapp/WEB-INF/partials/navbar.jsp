@@ -5,9 +5,13 @@
 <div class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <a class="navbar-brand" href="/ads">Adlister</a>
-        </div>
+<%--        <div class="navbar-header">--%>
+<%--            <a class="navbar-brand" href="/ads">Adlister</a>--%>
+<%--        </div>--%>
+
+        <a href="/ads" class="navbar-brand">
+            <img src="/img/navlogo1.png" height="50" alt="Adlister">
+        </a>
         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
