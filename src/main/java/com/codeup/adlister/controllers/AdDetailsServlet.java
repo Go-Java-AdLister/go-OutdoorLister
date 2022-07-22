@@ -14,12 +14,20 @@ import java.io.IOException;
 public class AdDetailsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        long adId = Long.parseLong(request.getParameter("id"));
+        System.out.println(adId);
+//      get all ads from the db with Dao and
+        Ads adDao = DaoFactory.getAdsDao();
+        Ad ad = adDao.findById(adId);
 
-//         get all ads from the db with Dao
-//        Ads adDao = DaoFactory.getAdsDao();
-//        Ad ad = adDao.findById();
+//      pull the username from users table
+        Ads adDao2 = DaoFactory.getAdsDao();
+        String username = adDao2.findUsernameById(adId);
 
-        request.getRequestDispatcher("/WEB-INF/details.jsp").forward(request, response);
+//      display targeted ad onto view
+        request.setAttribute("ad", ad);
+        request.setAttribute("username", username);
+        request.getRequestDispatcher("/WEB-INF/ads/details.jsp").forward(request, response);
     }
 
     @Override
