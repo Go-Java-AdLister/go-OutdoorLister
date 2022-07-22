@@ -14,4 +14,6 @@ public interface Ads {
     Ad findById(long id);
 
     String findUsernameById(long id);
+
+    void deleteAdById(long id);
 }
