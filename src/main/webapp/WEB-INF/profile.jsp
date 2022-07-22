@@ -23,14 +23,23 @@
                 <h2><c:out value="${ads.title}"/></h2>
                 <h5 class="fst-italic fs-6"><c:out value="${ads.field}"/></h5>
                 <p class="fs-5"><c:out value="${ads.description}"/></p>
-                <small class="fs-6">Posted on <c:out value="${ads.createdOn}"/></small>
-                <a href="/details?id=${ads.id}">More Details</a>
+                <div class="d-flex">
+                    <small class="fs-6">Posted on <c:out value="${ads.createdOn}"/></small>
+                    <button class="ms-auto" name="edit" onclick="window.location.href = '/edit?id=${ads.id}'">edit</button>
+                    <button name="delete" onclick="window.location.href = '/delete?id=${ads.id}'">delete</button>
+                </div>
+
             </div>
 
         </c:forEach>
     </div>
 </div>
-
+<script type="text/javascript">
+    function openPage(pageURL)
+    {
+        window.location.href = pageURL;
+    }
+</script>
 
 
 </body>

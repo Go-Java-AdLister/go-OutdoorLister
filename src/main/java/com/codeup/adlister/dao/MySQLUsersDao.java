@@ -5,6 +5,7 @@ import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class MySQLUsersDao implements Users {
@@ -67,7 +68,20 @@ public class MySQLUsersDao implements Users {
         );
     }
 
+    @Override
+    public long countPosts(User user){
+        long id = user.getId();
+        long numberOfPosts = 0;
+        Ads ads = DaoFactory.getAdsDao();
+        List<Ad> adsList = ads.all();
+        for(Ad ad: adsList){
+            if(ad.getUserId() == id){
+                numberOfPosts += 1;
+            }
+        }
 
+        return numberOfPosts;
+    }
 
 
 }
