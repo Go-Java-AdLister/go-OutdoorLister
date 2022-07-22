@@ -1,6 +1,7 @@
 package com.codeup.adlister.dao;
 
 import com.codeup.adlister.models.Ad;
+import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
 
 import java.sql.*;
@@ -111,6 +112,20 @@ public class MySQLAdsDao implements Ads {
         }
         return ads;
     }
+
+    @Override
+    public List<Ad> getUserAds(User user){
+        Ads adsDao = DaoFactory.getAdsDao();
+        List<Ad> ads = adsDao.all();
+        List<Ad> newAds = new ArrayList<>();
+        for(Ad ad: ads){
+            if(ad.getUserId() == user.getId()){
+                newAds.add(ad);
+            }
+        }
+        return newAds;
+    }
+
 
     public static void main(String[] args) {
 

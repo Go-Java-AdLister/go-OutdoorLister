@@ -6,21 +6,26 @@
         <jsp:param name="title" value="Viewing All The Ads" />
     </jsp:include>
 </head>
-<body>
+<body style="background-color: #C39876">
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-<h1>Here Are all the ads!</h1>
-<%--<div class="container d-flex">--%>
-<%--    <c:forEach var="ads" items="${ads}">--%>
+<div class="container pt-5">
+    <h1>So much to do, So little time to do it</h1>
+</div>
+<div class="container d-flex flex-wrap">
+    <c:forEach var="ads" items="${ads}">
 
-<%--        <div class="container col-md-5 p-0">--%>
-<%--            <h2><c:out value="${ads.title}"/></h2>--%>
-<%--            <h5 class="fst-italic fs-6"><c:out value="${ads.field}"/></h5>--%>
-<%--            <p class="fs-5"><c:out value="${ads.description}"/></p>--%>
-<%--            <small class="fs-6">Posted on <c:out value="${ads.createdOn}"/></small>--%>
-<%--            <a href="/details?id=${ads.id}">More Details</a>--%>
-<%--        </div>--%>
-<%--    </c:forEach>--%>
-<%--</div>--%>
+        <div class="container col-md-6 p-5">
+            <h2><c:out value="${ads.title}"/></h2>
+            <h5 class="fst-italic fs-6"><c:out value="${ads.field}"/></h5>
+            <p class="fs-5"><c:out value="${ads.description}"/></p>
+            <div class="d-flex">
+                <small class="fs-6">Posted on <c:out value="${ads.createdOn}"/></small>
+                <a class="ms-auto" href="/details?id=${ads.id}">More Details</a>
+            </div>
+
+        </div>
+    </c:forEach>
+</div>
 
 </body>
 </html>
