@@ -15,7 +15,7 @@ public class DeleteServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     long adId = Long.parseLong(request.getParameter("id"));
     Ads adDao = DaoFactory.getAdsDao();
-//    Ad ad = adDao.
+    adDao.deleteAdById(adId);
     }
 
     @Override
