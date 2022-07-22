@@ -60,7 +60,7 @@ public class MySQLAdsDao implements Ads {
         try {
             String insertQuery = "SELECT * FROM odlister_db.ads Where id = ?";
             PreparedStatement stmt = connection.prepareStatement(insertQuery );
-            stmt.setLong(1, ad.getId());
+            stmt.setLong(1, id);
             ResultSet rs = stmt.executeQuery();
             rs.next();
             ad = new Ad(rs.getLong("id"),
@@ -74,6 +74,23 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("error finding by id", e);
         }
         return ad;
+    }
+
+    @Override
+    public String findUsernameById(long id) {
+
+        try{
+            String insertQuery = "SELECT username FROM odlister_db.users u JOIN ads a ON u.id = a.user_id WHERE a.id = ?";
+            PreparedStatement stmt = connection.prepareStatement(insertQuery);
+            stmt.setLong(1, id);
+            ResultSet rs = stmt.executeQuery();
+            rs.next();
+            return rs.getString(1);
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
     private Ad extractAd(ResultSet rs) throws SQLException {
@@ -95,7 +112,16 @@ public class MySQLAdsDao implements Ads {
         return ads;
     }
 
+    public static void main(String[] args) {
 
+        Ads adDao = DaoFactory.getAdsDao();
+        String username = adDao.findUsernameById(2);
+
+        System.out.println(username);
+
+
+
+    }
 
 
 }

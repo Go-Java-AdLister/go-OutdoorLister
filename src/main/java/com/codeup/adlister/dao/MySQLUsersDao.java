@@ -51,6 +51,8 @@ public class MySQLUsersDao implements Users {
         }
     }
 
+
+
     private User extractUser(ResultSet rs) throws SQLException {
         if (! rs.next()) {
             return null;
@@ -62,5 +64,7 @@ public class MySQLUsersDao implements Users {
             rs.getString("password")
         );
     }
+
+
 
 }
