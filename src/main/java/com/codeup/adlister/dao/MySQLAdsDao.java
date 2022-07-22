@@ -93,6 +93,8 @@ public class MySQLAdsDao implements Ads {
 
     }
 
+
+
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
             rs.getLong("id"),
@@ -112,16 +114,41 @@ public class MySQLAdsDao implements Ads {
         return ads;
     }
 
-    public static void main(String[] args) {
+//    public static void main(String[] args) {
+//
+//        Ads adDao = DaoFactory.getAdsDao();
+//        String username = adDao.findUsernameById(2);
+//
+//        System.out.println(username);}
 
-        Ads adDao = DaoFactory.getAdsDao();
-        String username = adDao.findUsernameById(2);
-
-        System.out.println(username);
 
 
+
+    @Override
+    public void deleteAdById(long id) {
+
+        String query = "DELETE FROM ads WHERE id = ?";
+        try{
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setLong(1, id);
+            stmt.executeUpdate();
+        } catch(SQLException e){
+            throw new RuntimeException("Error deleting ad by id", e);
+        }
 
     }
 
-
+    public static void main(String[] args) {
+        Ads adDao = DaoFactory.getAdsDao();
+        adDao.deleteAdById(2);
+    }
 }
+
+
+
+
+
+
+
+
+
