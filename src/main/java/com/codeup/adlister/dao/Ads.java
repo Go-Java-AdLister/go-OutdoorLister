@@ -18,5 +18,8 @@ public interface Ads {
 
     Ad editById(long id, Ad ad);
 
+    public List<Ad> search(String field);
+
+
 
 }

@@ -22,7 +22,7 @@
                     <option value="camping">Camping</option>
                     <option value="fishing">Fishing</option>
                     <option value="hiking">Hiking</option>
-                    <option value="misc">Miscellaneous</option>
+                    <option value="misc">Misc</option>
                 </select><br>
                 <hr>
                 <label for="description">Description</label>
