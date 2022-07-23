@@ -11,25 +11,20 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Ad Details" />
     </jsp:include>
-    <title>Title</title>
 </head>
-<body>
+<body style="background-color: #C39876">
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
-
-
-
-
-
-
-<div class="card text-center">
-    <div class="card-header">Ad Details</div>
+<div class="card text-center" style="background-color: #D8B184">
+    <h2 class="card-header">Ad Details</h2>
     <div class="card-body">
         <h1 class="card-title">${ad.title}</h1>
         <h2 class="card-text">${ad.description}</h2>
-        <a href="/profile" class="btn btn-primary">User: ${username}</a>
+        <h5>Posted by: ${username}</h5>
     </div>
-    <div class="card-footer text-muted">${ad.createdOn}</div>
+    <div class="card-footer text-muted">
+        <h5> Created: ${ad.createdOn}</h5>
+    </div>
 </div>
 
 
