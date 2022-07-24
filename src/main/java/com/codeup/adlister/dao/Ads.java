@@ -20,4 +20,10 @@ public interface Ads {
 
     void deleteAdById(long id);
 
+
+    Ad editById(long id, Ad ad);
+
+    public List<Ad> search(String field);
+
+
 }

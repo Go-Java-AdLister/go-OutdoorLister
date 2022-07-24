@@ -24,8 +24,10 @@
                     <option value="fishing">Fishing</option>
                     <option value="sports">Sports</option>
                     <option value="hiking">Hiking</option>
+                    <option value="misc">Misc</option>
                     <option value="parks&rec">Parks & Rec.</option>
                     <option value="misc">Misc.</option>
+
                 </select><br>
                 <hr>
                 <label for="description">Description</label>

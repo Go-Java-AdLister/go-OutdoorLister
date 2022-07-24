@@ -94,8 +94,6 @@ public class MySQLAdsDao implements Ads {
 
     }
 
-
-
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
             rs.getLong("id"),
@@ -133,8 +131,6 @@ public class MySQLAdsDao implements Ads {
 
 
 
-
-
     @Override
     public void deleteAdById(long id) {
 
@@ -149,9 +145,40 @@ public class MySQLAdsDao implements Ads {
 
     }
 
+    @Override
+    public Ad editById(long id, Ad ad) {
+        String query = "UPDATE ads SET description = ?  WHERE id = ?";
+        try{
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setLong(2, id);
+            stmt.setString(1, ad.getDescription());
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error Error Error ",e);
+        }
+        return ad;
+    }
+
+    @Override
+    public List<Ad> search(String field) {
+        String query = "SELECT * FROM odlister_db.ads Where field = ?";
+        try{
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, field);
+            ResultSet rs = stmt.executeQuery();
+            return createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error in search method", e);
+        }
+    }
+
     public static void main(String[] args) {
         Ads adDao = DaoFactory.getAdsDao();
-        adDao.deleteAdById(2);
+
+//        adDao.deleteAdById(2);
+//        Ad ad = new Ad("Cookie is the name of my pet iguana");
+//
+//        adDao.editById(2, ad);
     }
 }
 

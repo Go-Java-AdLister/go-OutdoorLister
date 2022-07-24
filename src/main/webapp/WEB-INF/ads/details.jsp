@@ -27,6 +27,12 @@
     </div>
 </div>
 
+<div calss="bg-image"
+     style="background-image: url('https://d29fhpw069ctt2.cloudfront.net/photo/34444/preview/photo-1414016642750-7fdd78dc33d9_npreviews_66e4.jpg');
+        height: 70vh;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.6);">
+</div>
 
 
 </body>
