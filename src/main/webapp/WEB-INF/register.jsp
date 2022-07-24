@@ -5,7 +5,7 @@
         <jsp:param name="title" value="Register For Our Site!" />
     </jsp:include>
 </head>
-<body>
+<body style="background-color: #C39876">
     <jsp:include page="partials/navbar.jsp" />
     <div class="container">
         <h1>Please fill in your information.</h1>
@@ -28,6 +28,14 @@
             </div>
             <input type="submit" class="btn btn-primary btn-block">
         </form>
+    </div>
+    <div class="image-fluid"
+         style="background-image: url('img/cover.png');
+        height: 45vh;
+        background-size: cover;
+        /*background-attachment: fixed;*/
+        background-position: center;
+        ">
     </div>
 </body>
 </html>

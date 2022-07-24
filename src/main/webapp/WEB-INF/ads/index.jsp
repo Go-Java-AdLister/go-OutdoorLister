@@ -11,13 +11,13 @@
 <body style="background-color: #C39876">
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
-<div class="container pt-5">
+<div class="container pt-5 pb-5 text-center">
     <h1>So much to do, So little time to do it</h1>
 </div>
 <div class="container d-flex flex-wrap">
     <c:forEach var="ads" items="${ads}">
 
-        <div class="container col-md-6 p-3">
+        <div class="container col-md-8 mb-3 border" style="background-color: #D8B184">
             <h2><c:out value="${ads.title}"/></h2>
             <h5 class="fst-italic fs-6"><c:out value="${ads.field}"/></h5>
             <p class="fs-5"><c:out value="${ads.description}"/></p>

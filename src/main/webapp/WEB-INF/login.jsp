@@ -10,7 +10,7 @@
     }
 </style>
 </head>
-<body>
+<body style="background-color: #C39876">
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
         <h1>Please Log In</h1>
@@ -26,11 +26,11 @@
             <input type="submit" class="btn btn-primary btn-block" value="Log In">
         </form>
     </div>
-    <div calss="image-fluid"
+    <div class="image-fluid"
          style="background-image: url('img/cover.png');
-        height: 100vh;
+        height: 60vh;
         background-size: cover;
-        background-attachment: fixed;
+        /*background-attachment: fixed;*/
         background-position: center;
         ">
     </div>

@@ -6,7 +6,7 @@
         <jsp:param name="title" value="Your Profile"/>
     </jsp:include>
 </head>
-<body style="background-color: #8C795D">
+<body style="background-color: #C39876">
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 <div class="container">
     <div class="container">
@@ -16,10 +16,10 @@
         <h3>You have created <c:out value="${posts}"/> ads.</h3>
     </div>
     <hr>
-    <div class="container d-flex">
+    <div class="container d-flex flex-wrap">
         <c:forEach var="ads" items="${ads}">
 
-            <div class="container col-md-5 p-0">
+            <div class="container col-md-8 mb-3" style="background-color: #D8B184">
                 <h2><c:out value="${ads.title}"/></h2>
                 <h5 class="fst-italic fs-6"><c:out value="${ads.field}"/></h5>
                 <p class="fs-5"><c:out value="${ads.description}"/></p>
