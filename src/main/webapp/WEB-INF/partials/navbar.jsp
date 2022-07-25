@@ -20,7 +20,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="nav navbar-nav">
 
-            <li><a href="/ads/search" class="nav-item nav-link">Search Ad</a></li>
+            <li><a href="/ads/search" class="nav-item nav-link">Search</a></li>
 
             <c:if test="${empty user}">
                 <li><a href="/register" class="nav-item nav-link active">Register</a></li>
