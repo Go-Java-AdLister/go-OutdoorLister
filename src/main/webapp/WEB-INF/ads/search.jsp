@@ -41,8 +41,9 @@
                 <h2><c:out value="${ads.title}"/></h2>
                 <h5 class="fst-italic fs-6"><c:out value="${ads.field}"/></h5>
                 <p class="fs-5"><c:out value="${ads.description}"/></p>
-                <div class=" text-end">
+                <div class=" d-flex">
                     <small class="fs-6">Posted on <c:out value="${ads.createdOn}"/></small>
+                    <a class="ms-auto" href="/details?id=${ads.id}">More Details</a>
                 </div>
 
             </div>

@@ -19,9 +19,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="nav navbar-nav">
+
+            <li><a href="/ads/search" class="nav-item nav-link">Search Ad</a></li>
+
             <c:if test="${empty user}">
                 <li><a href="/register" class="nav-item nav-link active">Register</a></li>
             </c:if>
+
             <c:choose>
                 <c:when test="${not empty user}">
                     <li><a href="/profile" class="nav-item nav-link active">Profile</a></li>
@@ -39,9 +43,6 @@
                 <li><a href="/ads/create" class="nav-item nav-link">Create Ad</a></li>
             </c:if>
 
-            <c:if test="${not empty user}">
-                <li><a href="/ads/search" class="nav-item nav-link">Search Ad</a></li>
-            </c:if>
 
         </ul>
     </div><!-- /.navbar-collapse -->
