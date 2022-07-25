@@ -175,10 +175,10 @@ public class MySQLAdsDao implements Ads {
     public static void main(String[] args) {
         Ads adDao = DaoFactory.getAdsDao();
 
-//        adDao.deleteAdById(2);
-//        Ad ad = new Ad("Cookie is the name of my pet iguana");
-//
-//        adDao.editById(2, ad);
+        adDao.deleteAdById(2);
+        Ad ad = new Ad("Cookie is the name of my pet iguana");
+
+        adDao.editById(2, ad);
     }
 }
 
