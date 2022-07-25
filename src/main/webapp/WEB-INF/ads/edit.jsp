@@ -14,22 +14,22 @@
     </jsp:include>
 </head>
 
-<body>
+<body style="background-color: #C39876">
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
+<div class="container">
+    <form action="" method="post">
+        <label for="column" class="fs-2 mt-5">What would you like to change?</label>
+        <select name="column" id="column">
+            <option value="title">Title</option>
+            <option value="field">Field</option>
+            <option value="description">Description</option>
+        </select>
+        <input type="hidden" name="id" value="${id}">
+        <button>Submit</button>
+    </form>
 
-<form action="" method="post">
-    <label for="column">What would you like to change?</label>
-    <select name="column" id="column">
-        <option value="title">Title</option>
-        <option value="field">Field</option>
-        <option value="description">Description</option>
-    </select>
-    <input type="hidden" name="id" value="${id}">
-    <button>Submit</button>
-</form>
 
-
-<c:choose>
+    <c:choose>
     <c:when test="${column == 'title'}">
         <form action="" method="post">
             <label>Title</label>
@@ -58,14 +58,16 @@
         </form>
     </c:when>
     <c:when test="${column == 'description'}">
-        <form action="" method="post">
-            <label for="description">Description</label>
-            <textarea id="description" name="value" class="form-control" ></textarea>
-            <input type="hidden" name="id" value="${id}">
-            <input type="hidden" name="column" value="description">
-            <input type="submit" class="btn btn-block btn-primary">
+    <form action="" method="post">
+        <label for="description">Description</label>
+        <textarea id="description" name="value" class="form-control" ></textarea>
+        <input type="hidden" name="id" value="${id}">
+        <input type="hidden" name="column" value="description">
+        <input type="submit" class="btn btn-block btn-primary">
 
-        </form>
+    </form>
+</div>
+
     </c:when>
 </c:choose>
 
