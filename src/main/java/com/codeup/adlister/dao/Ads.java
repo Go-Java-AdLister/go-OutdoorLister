@@ -21,7 +21,7 @@ public interface Ads {
     void deleteAdById(long id);
 
 
-    Ad editById(long id, Ad ad);
+    Ad editById(String column ,long id, String columnValue);
 
     public List<Ad> search(String field);
 
