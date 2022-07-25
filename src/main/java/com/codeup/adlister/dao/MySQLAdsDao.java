@@ -146,17 +146,25 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
-    public Ad editById(long id, Ad ad) {
-        String query = "UPDATE ads SET description = ?  WHERE id = ?";
+    public Ad editById(String column ,long id, String columnValue) {
+        String query = "";
+        if(column.equals("description")){
+            query =  "UPDATE ads SET description = ?  WHERE id = ?";
+        } else if(column.equals("title")){
+            query =  "UPDATE ads SET title = ?  WHERE id = ?";
+        }  else if(column.equals("field")) {
+            query = "UPDATE ads SET field = ?  WHERE id = ?";
+        }
         try{
             PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, columnValue);
             stmt.setLong(2, id);
-            stmt.setString(1, ad.getDescription());
             stmt.executeUpdate();
+
         } catch (SQLException e) {
             throw new RuntimeException("Error Error Error ",e);
         }
-        return ad;
+        return null;
     }
 
     @Override
@@ -172,14 +180,11 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-    public static void main(String[] args) {
-        Ads adDao = DaoFactory.getAdsDao();
+//    public static void main(String[] args) {
+//        Ads adsDao = DaoFactory.getAdsDao();
+//        adsDao.editById("description", 5,"fishing");
+//    }
 
-        adDao.deleteAdById(2);
-        Ad ad = new Ad("Cookie is the name of my pet iguana");
-
-        adDao.editById(2, ad);
-    }
 }
 
 
