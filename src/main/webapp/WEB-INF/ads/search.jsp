@@ -17,24 +17,27 @@
         background-color: coral;
     }
 </style>
-<body>
+<body style="background-color: #C39876">
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
-<div class="text-center">
+<div class="text-center" style="background-color: #C39876">
 <form action="" method="post">
 <%--  <input type="submit" name="button1" value="CAMPING" class="btn btn btn-secondary btn-lg" />--%>
-    <button class="btn" name="button1"><i class="fa-regular fa-campground btn-lg"></i> Camping</button>
+    <button class="btn" name="button1"><i class="fa-solid fa-campground"></i> Camping</button>
 <%--  <input type="submit" name="button2" value="" class="btn btn btn-secondary btn-lg"/>--%>
-    <button class="btn" name="button2"><i class="fa-regular fa-fish-fins"></i> Fishing</button>
+    <button class="btn" name="button2"><i class="fa-solid fa-fish-fins"></i> Fishing</button>
 <%--  <input type="submit" name="button3" value="HIKING" class="btn btn btn-secondary btn-lg" />--%>
     <button class="btn" name="button3"><i class="fa-solid fa-person-hiking"></i> Hiking</button>
 <%--    <input type="submit" name="button4" value="MISC.." class="btn btn btn-secondary btn-lg" />--%>
     <button class="btn" name="button4"><i class="fa-solid fa-truck-monster"></i> Misc...</button>
+    <button class="btn" name="button5"><i class="fa-solid fa-crosshairs"></i> Hunting</button>
+    <button class="btn" name="button6"><i class="fa-solid fa-football"></i> Sports</button>
+    <button class="btn" name="button7"><i class="fa-solid fa-tree"></i> Parks&Rec</button>
 </form>
-    <div class="container d-flex flex-wrap " style="">
+    <div class="container d-flex flex-wrap " >
         <c:forEach var="ads" items="${ads}">
 
-            <div class="container col-md-8 mb-3 border" style="">
+            <div class="container col-md-8 mb-3 border" style="background-color: #D8B184">
                 <h2><c:out value="${ads.title}"/></h2>
                 <h5 class="fst-italic fs-6"><c:out value="${ads.field}"/></h5>
                 <p class="fs-5"><c:out value="${ads.description}"/></p>

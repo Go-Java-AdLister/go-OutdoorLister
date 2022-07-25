@@ -19,7 +19,7 @@
     <div class="container d-flex flex-wrap">
         <c:forEach var="ads" items="${ads}">
 
-            <div class="container col-md-8 mb-3" style="background-color: #D8B184">
+            <div class="container col-md-8 mb-3 border" style="background-color: #D8B184">
                 <h2><c:out value="${ads.title}"/></h2>
                 <h5 class="fst-italic fs-6"><c:out value="${ads.field}"/></h5>
                 <p class="fs-5"><c:out value="${ads.description}"/></p>

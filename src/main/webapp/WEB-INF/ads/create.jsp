@@ -26,7 +26,7 @@
                     <option value="hiking">Hiking</option>
                     <option value="misc">Misc</option>
                     <option value="parks&rec">Parks & Rec.</option>
-                    <option value="misc">Misc.</option>
+
 
                 </select><br>
                 <hr>

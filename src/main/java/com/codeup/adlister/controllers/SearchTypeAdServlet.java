@@ -41,7 +41,15 @@ public class SearchTypeAdServlet extends HttpServlet {
         } else if (request.getParameter("button4") != null) {
             request.setAttribute("ads", DaoFactory.getAdsDao().search("misc"));
             request.getRequestDispatcher("/WEB-INF/ads/search.jsp").forward(request, response);
-
+        } else if (request.getParameter("button5") != null) {
+            request.setAttribute("ads", DaoFactory.getAdsDao().search("hunting"));
+            request.getRequestDispatcher("/WEB-INF/ads/search.jsp").forward(request, response);
+        } else if (request.getParameter("button6") != null) {
+            request.setAttribute("ads", DaoFactory.getAdsDao().search("sports"));
+            request.getRequestDispatcher("/WEB-INF/ads/search.jsp").forward(request, response);
+        } else if (request.getParameter("button7") != null) {
+            request.setAttribute("ads", DaoFactory.getAdsDao().search("parks&rec"));
+            request.getRequestDispatcher("/WEB-INF/ads/search.jsp").forward(request, response);
         } else {
             PrintWriter out = response.getWriter();
             out.println("Hi");
