@@ -39,6 +39,10 @@
                 <li><a href="/ads/create" class="nav-item nav-link">Create Ad</a></li>
             </c:if>
 
+            <c:if test="${not empty user}">
+                <li><a href="/ads/search" class="nav-item nav-link">Search Ad</a></li>
+            </c:if>
+
         </ul>
     </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
